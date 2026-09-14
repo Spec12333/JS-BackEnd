@@ -1,0 +1,32 @@
+[
+  {
+    "id": 77271081,
+    "username": "Bob",
+    "passwordHash": "$2b$10$8jF23Mnydw4D2Dr25.cfVemYDHA9INTpZiszjK9EhxUZCmcZ2nZaO",
+    "role": "customer"
+  },
+  {
+    "id": 97695895,
+    "username": "Nathan",
+    "passwordHash": "$2b$10$aG/LNjwfU4dvhH9cquHHKuFzz6ci6X0srT3zfIOM9vanfadjv7sAC",
+    "role": "customer"
+  },
+  {
+    "id": 17674523,
+    "username": "John",
+    "passwordHash": "$2b$10$wiTqDHqqIdIZZl.I/YIXte6kPVt25VKeaUKgXYzfxqvhDAxoTVAzK",
+    "role": "admin"
+  },
+  {
+    "id": 42975538,
+    "username": "Edward",
+    "passwordHash": "$2b$10$Jvyk3.xnc9OE43P6gZMfauxjLh7XnrLGVYPT.m1WeSi48AZC8HthO",
+    "role": "admin"
+  },
+  {
+    "id": 26606086,
+    "username": "Armen",
+    "passwordHash": "$2b$10$Th1W5zKa23F/TrE4463b1uM/jya5OEJlgE.xpEe5vXTuYH/8.jgZ6",
+    "role": "customer"
+  }
+]

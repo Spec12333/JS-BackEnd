@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 79.99,
+    "category": "Electronics",
+    "stock": 39
+  },
+  {
+    "id": 2,
+    "name": "Coffee Maker",
+    "price": 49.99,
+    "category": "Kitchen",
+    "stock": 31
+  },
+  {
+    "id": 3,
+    "name": "Running Shoes",
+    "price": 119.99,
+    "category": "Sports",
+    "stock": 28
+  },
+  {
+    "id": 4,
+    "name": "Desk Lamp",
+    "price": 34.99,
+    "category": "Furniture",
+    "stock": 56
+  },
+  {
+    "id": 5,
+    "name": "USB-C Cable",
+    "price": 12.99,
+    "category": "Electronics",
+    "stock": 152
+  },
+  {
+    "id": 6,
+    "name": "Yoga Mat",
+    "price": 24.99,
+    "category": "Sports",
+    "stock": 38
+  },
+  {
+    "id": 7,
+    "name": "Blender",
+    "price": 89.99,
+    "category": "Kitchen",
+    "stock": 17
+  },
+  {
+    "id": 8,
+    "name": "Phone Case",
+    "price": 15.99,
+    "category": "Electronics",
+    "stock": 88
+  },
+  {
+    "id": 9,
+    "name": "Bookshelf",
+    "price": 159.99,
+    "category": "Furniture",
+    "stock": 12
+  },
+  {
+    "id": 15732688,
+    "name": "Iphone 17",
+    "price": "1099",
+    "category": "Devices",
+    "stock": 22
+  }
+]
