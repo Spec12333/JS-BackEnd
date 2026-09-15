@@ -1,72 +1,79 @@
 [
   {
-    "id": 1,
+    "id": "44906785-a46b-401a-bab3-e3e4567f40a3",
     "name": "Wireless Headphones",
     "price": 79.99,
     "category": "Electronics",
-    "stock": 39
+    "stock": 35
   },
   {
-    "id": 2,
+    "id": "4a92cfb2-6f4c-47a8-9d77-6c11137d3e29",
     "name": "Coffee Maker",
     "price": 49.99,
     "category": "Kitchen",
-    "stock": 31
+    "stock": 27
   },
   {
-    "id": 3,
+    "id": "d01c9f7c-208d-4817-b1b6-0109a26f7909",
     "name": "Running Shoes",
     "price": 119.99,
     "category": "Sports",
     "stock": 28
   },
   {
-    "id": 4,
+    "id": "7c9f71e5-dada-4e63-b4ef-179bb9306256",
     "name": "Desk Lamp",
     "price": 34.99,
     "category": "Furniture",
     "stock": 56
   },
   {
-    "id": 5,
+    "id": "0adbe21f-d09e-4121-a721-fd03cd33229f",
     "name": "USB-C Cable",
     "price": 12.99,
     "category": "Electronics",
     "stock": 152
   },
   {
-    "id": 6,
+    "id": "b4efc80c-8e9b-48cf-a2d6-931f40767154",
     "name": "Yoga Mat",
     "price": 24.99,
     "category": "Sports",
     "stock": 38
   },
   {
-    "id": 7,
+    "id": "6fc47a0e-be70-4f49-b7e0-7648cd28a7e4",
     "name": "Blender",
     "price": 89.99,
     "category": "Kitchen",
-    "stock": 17
+    "stock": 12
   },
   {
-    "id": 8,
+    "id": "32abc2b0-6953-4b11-8ad9-93c5fd04ec4f",
     "name": "Phone Case",
     "price": 15.99,
     "category": "Electronics",
     "stock": 88
   },
   {
-    "id": 9,
+    "id": "e5585b89-b53b-4949-80eb-8a5b0e1dd6c1",
     "name": "Bookshelf",
     "price": 159.99,
     "category": "Furniture",
-    "stock": 12
+    "stock": 7
   },
   {
-    "id": 15732688,
+    "id": "e7d4fc9c-78d2-4ad4-add1-49d4fd02e36d",
     "name": "Iphone 17",
-    "price": "1099",
+    "price": 1099,
     "category": "Devices",
-    "stock": 22
+    "stock": 19
+  },
+  {
+    "id": "5aa7fb9a-c01e-485f-8223-89b8b81a055d",
+    "name": "Iphone Duo",
+    "price": 1999,
+    "category": "Electronics",
+    "stock": 20
   }
 ]

@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = "super-secret-key-123-xyz-extremely-long-and-secure-98765";
+const { JWT_SECRET }  = require('../config/env');
 
 function authentication(req, res, next) {
     const header = req.headers.authorization;

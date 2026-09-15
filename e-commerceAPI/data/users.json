@@ -1,32 +1,32 @@
 [
   {
-    "id": 77271081,
+    "id": "4020b2db-aa75-4296-9459-8be637cf4243",
+    "username": "James",
+    "passwordHash": "$2b$10$Zdnyq/CiMigeDe80pi6lguQt5Mr.bXQEbGMm0QZQzNxV7SoBTsxFG",
+    "role": "admin"
+  },
+  {
+    "id": "5c7c86f5-4461-4825-b458-c0c481bc9b52",
     "username": "Bob",
-    "passwordHash": "$2b$10$8jF23Mnydw4D2Dr25.cfVemYDHA9INTpZiszjK9EhxUZCmcZ2nZaO",
+    "passwordHash": "$2b$10$atQAfEsForDUJMmjxmfvVuBt1qLzF2iUooPGme4XnEgeFeonuw5cm",
     "role": "customer"
   },
   {
-    "id": 97695895,
-    "username": "Nathan",
-    "passwordHash": "$2b$10$aG/LNjwfU4dvhH9cquHHKuFzz6ci6X0srT3zfIOM9vanfadjv7sAC",
-    "role": "customer"
-  },
-  {
-    "id": 17674523,
+    "id": "7b7e17b5-77a3-49bc-b215-bc4c060acdcb",
     "username": "John",
-    "passwordHash": "$2b$10$wiTqDHqqIdIZZl.I/YIXte6kPVt25VKeaUKgXYzfxqvhDAxoTVAzK",
-    "role": "admin"
+    "passwordHash": "$2b$10$TFVgQTKA8873IUwAgB558OMUv9Oj/rzikVyMl9zxO8degdUyHn/BO",
+    "role": "customer"
   },
   {
-    "id": 42975538,
+    "id": "032ee5c1-2cdc-43e3-b1e5-cd9d5a3f37e6",
+    "username": "Nathan",
+    "passwordHash": "$2b$10$GKdBaLtcly8r5b6xqnrK8.Evxt6rfJS.12J2icpO5bTS/UQZTtDPK",
+    "role": "customer"
+  },
+  {
+    "id": "8e268281-d5ce-445a-afa4-68406261f7c5",
     "username": "Edward",
-    "passwordHash": "$2b$10$Jvyk3.xnc9OE43P6gZMfauxjLh7XnrLGVYPT.m1WeSi48AZC8HthO",
-    "role": "admin"
-  },
-  {
-    "id": 26606086,
-    "username": "Armen",
-    "passwordHash": "$2b$10$Th1W5zKa23F/TrE4463b1uM/jya5OEJlgE.xpEe5vXTuYH/8.jgZ6",
+    "passwordHash": "$2b$10$GhAG.FOXi4F17sJU85MPFeo82L5O6Jo45bYNDI0NQ4sHQRoNRm2fS",
     "role": "customer"
   }
 ]

@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     const products = await readData('products.json');
-    const productId = Number(req.params.id);
+    const productId = req.params.id;
 
     const product = products.find(product => product.id === productId);
     if (!product) {
@@ -32,7 +32,16 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', authentication, authorization('admin'),async (req, res) =>  {
     const {name, price, category, stock} = req.body;
-    if (!name || !price) {
+
+    if (typeof price !== 'number' || !Number.isFinite(price) || price <= 0) {
+        return res.status(400).json({error : "Price must be a positive number"});
+    }
+    
+    if (stock !== undefined && (!Number.isInteger(stock) || stock < 0)) {
+        return res.status(400).json({error : "Stock must be a non-negative integer"});
+    }
+
+    if (!name || price === undefined || price === null) {
         return res
         .status(400)
         .json({error : "Name and Price are required"});
@@ -59,7 +68,7 @@ router.post('/', authentication, authorization('admin'),async (req, res) =>  {
 
 router.put('/:id', authentication, authorization('admin'),async (req, res) => {
     const products = await readData('products.json');
-    const productIndex = products.findIndex(product => product.id === Number(req.params.id));
+    const productIndex = products.findIndex(product => product.id === req.params.id);
     if (productIndex === -1) {
         return res
         .status(404)
@@ -77,14 +86,14 @@ router.put('/:id', authentication, authorization('admin'),async (req, res) => {
 
 router.delete('/:id', authentication, authorization('admin'), async (req, res) => {
     let products = await readData('products.json');
-    const exists = products.some(product => product.id === Number(req.params.id));
+    const exists = products.some(product => product.id === req.params.id);
     if (!exists) {
         return res
         .status(404)
         .json({error : "The product doesnt exist to remove it"});
     }
 
-    products = products.filter(product => product.id !== Number(req.params.id));
+    products = products.filter(product => product.id !== req.params.id);
     await writeData('products.json', products)
     return res
     .status(204)

@@ -19,7 +19,7 @@ router.post('/', authentication, async (req, res) => {
     const orderItems = [];
 
     for (let item of items) {
-        const product = products.find(product => product.id === Number(item.productId));
+        const product = products.find(product => product.id === item.productId);
         
         if (!product) {
             return res
@@ -47,7 +47,7 @@ router.post('/', authentication, async (req, res) => {
         })
     }
     items.forEach(item => {
-        const product = products.find(p => p.id === Number(item.productId));
+        const product = products.find(p => p.id === item.productId);
         product.stock -= item.quantity;
     });
 
@@ -74,6 +74,12 @@ router.post('/', authentication, async (req, res) => {
 
 router.get('/', authentication, authorization('admin', 'customer'), async (req, res) => {
     const orders = await readData('orders.json');
+    if (req.user.role === 'admin') {
+        return res
+        .status(200)
+        .json(orders);
+    }
+
     const userOrders = [];
     for (let order of orders) {
         if (order.userId === req.user.id) {
@@ -92,7 +98,7 @@ router.get('/', authentication, authorization('admin', 'customer'), async (req, 
 
 router.get('/:id', authentication, authorization('admin', 'customer'), async (req, res) => {
     const orders = await readData('orders.json');
-    const exists = orders.find(order => order.id === Number(req.params.id));
+    const exists = orders.find(order => order.id === req.params.id);
     if (!exists) {
         return res
         .status(404)
@@ -117,7 +123,7 @@ router.get('/:id', authentication, authorization('admin', 'customer'), async (re
 router.patch('/:id', authentication, authorization('admin'), async (req, res) => {
     const orders = await readData('orders.json');
 
-    const exists = orders.find(order => order.id === Number(req.params.id));
+    const exists = orders.find(order => order.id === req.params.id);
     if (!exists) {
         return res
         .status(404)
@@ -134,7 +140,7 @@ router.patch('/:id', authentication, authorization('admin'), async (req, res) =>
         if (req.body.status === 'delivered') {
             return res
             .status(403)
-            .json({error : "You cannot maka pending delivered"});
+            .json({error : "You cannot make pending delivered"});
         }
         exists.status = req.body.status;
     } else if (exists.status === 'shipped') {
@@ -144,6 +150,10 @@ router.patch('/:id', authentication, authorization('admin'), async (req, res) =>
             .json({error : "You cannot make shipped pending"});
         }
         exists.status = req.body.status;
+    } else if (exists.status === 'delivered') {
+        return res
+        .status(403)
+        .json({error : "The order is already delivered"});
     }
 
     await writeData('orders.json', orders);

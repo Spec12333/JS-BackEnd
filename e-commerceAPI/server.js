@@ -11,12 +11,19 @@ app.use('/auth', authRoute);
 app.use('/products', productsRoute);
 app.use('/orders', orderRoute);
 
+app.use((req, res) => {
+    res
+    .status(404)
+    .json({error : "The page is not found"})
+})
+
 app.use((err, req, res, next) => {
     console.error(err.message);
     res
     .status(500)
     .json({error : "Internal server error"});
 })
+
 app.listen(PORT, () => {
     console.log(`Server is listening on Port ${PORT}`);
 })

@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const { readData, writeData } = require("../utils/fileDB");
 const idGenerator = require("../utils/idGenerator");
 
-const JWT_SECRET = "super-secret-key-123-xyz-extremely-long-and-secure-98765";
+const { JWT_SECRET } = require('../config/env');
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
